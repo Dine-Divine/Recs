@@ -32,3 +32,6 @@ data
 
 database/atlasinfo.js
 database/databaseSeed.txt
+
+# .env
+.env

@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:3000"
+  http:
+    pool: 10
+  phases:
+    - duration: 60
+      arrivalRate: 50
+  payload:
+    path: "./database/uuid.csv"
+    fields:
+      - "uuid"
+scenarios:
+  - flow:
+    - get:
+        url: "/read?uuid={{uuid}}"
